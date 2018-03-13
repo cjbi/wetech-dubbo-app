@@ -67,13 +67,6 @@ dubbo | 分布式服务框架 | 2.6.0 |  [https://www.aliyun.com/product/dubbo/]
 
 ## 预览图
 
-> 启动工程
-
-![](docs/preview/1.gif)
-
-> 轻量配置中心
-
-![](docs/preview/2.gif)
 
 > 测试服务调用
 
