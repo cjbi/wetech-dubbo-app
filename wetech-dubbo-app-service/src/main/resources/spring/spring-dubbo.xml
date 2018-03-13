@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:cache="http://www.springframework.org/schema/cache" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+	<!-- 提供方应用信息，用于计算依赖关系 -->
+	<dubbo:application name="wetech-dubbo-app-service" />
+	<!-- 使用zookeeper注册中心暴露服务地址 -->
+	<dubbo:registry address="zookeeper://127.0.0.1:2181" />
+	<!-- 用dubbo协议在20880端口暴露服务 -->
+	<dubbo:protocol name="dubbo" port="20880" />
+
+
+	<!-- 扫描com.alibaba.dubbo.config.annotation.Service注解包路径，多个包用逗号分隔，不填pacakge表示扫描当前ApplicationContext中所有的类 -->
+	<!-- 请注意：被事务代理的spring service 不能使用注解方式发布dubbo服务 -->
+	<!-- 详情请看：http://jhaij.iteye.com/blog/2171723 -->
+	<dubbo:annotation package="tech.wetech.dubbo.demo.service"/>
+
+	<!-- 以下为配置xml形式暴露服务，看个人喜好 -->
+	<!--用Spring配置声明暴露服务-->
+	<dubbo:service ref="demoService" interface="tech.wetech.dubbo.api.demo.service.DemoService"/>
+	<dubbo:service ref="userService" interface="tech.wetech.dubbo.api.demo.service.UserService"/>
+
+	<!--具体实现该接口的 bean-->
+	<bean id="demoService" class="tech.wetech.dubbo.demo.service.impl.DemoServiceImpl"/>
+	<bean id="userService" class="tech.wetech.dubbo.demo.service.impl.UserServiceImpl"/>
+
+</beans>
