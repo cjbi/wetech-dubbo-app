@@ -69,9 +69,9 @@ dubbo | 分布式服务框架 | 2.6.0 |  [https://www.aliyun.com/product/dubbo/]
 - 通过git下载源码
 - 创建数据库wetech_dubbo_app，数据库编码为UTF-8
 - 执行docs/sql/init.sql文件，初始化数据
+- 启动zookeeper注册中心
 - 修改wetech-dubbo-app-service模块下config.properties文件，更改MySQL账号和密码
 - 在项目根模块执行【mvn clean package】
-- 启动zookeeper注册中心
 - 将wetech-dubbo-app-service模块（服务提供者）和wetech-dubbo-app-web模块（服务调用者）放入tomcat启动！
 - 访问http://localhost:8080/wetech-dubbo-app-web 测试服务调用
 
