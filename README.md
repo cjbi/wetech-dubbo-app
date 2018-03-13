@@ -14,16 +14,7 @@ wetech-dubbo-parent -- 版本申明管理
 
 ## 模块介绍
 
-- [wetech-dubbo-app](#wetech-dubbo-app)
-    - [组织结构](#%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84)
-    - [模块介绍](#%E6%A8%A1%E5%9D%97%E4%BB%8B%E7%BB%8D)
-    - [技术选型](#%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B)
-        - [后端技术](#%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF)
-    - [软件需求](#%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82)
-    - [本地部署](#%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2)
-    - [预览图](#%E9%A2%84%E8%A7%88%E5%9B%BE)
-    - [许可证](#%E8%AE%B8%E5%8F%AF%E8%AF%81)
-    - [获取源码](#%E8%8E%B7%E5%8F%96%E6%BA%90%E7%A0%81)
+1. wetech-dubbo-app-parent
 
 > 是所有子模块的父工程，以及版本申明管理，无实质代码
 
